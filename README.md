@@ -1,8 +1,6 @@
 # Hyperspectral-Regression-Pipeline-for-DON-Prediction
 A modular, scalable, and containerized machine learning pipeline for predicting DON concentration from hyperspectral data, featuring model selection, hyperparameter tuning, and API deployment
 
---
-
 ## Project Structure
 hyperspectral_regression/
 │── src/
@@ -51,7 +49,6 @@ hyperspectral_regression/
 │── run.py                      # Main entry point to execute the pipeline.
 │── README.md                   # Overview and instructions on running the project.
 
---
 
 ## Installation
 
@@ -61,12 +58,10 @@ hyperspectral_regression/
    cd Hyperspectral-Regression-Pipeline-for-DON-Prediction
    ```
 
---
 
 ## Configuration
 The project settings are defined in the config.yaml file. This file contains configuration options for data paths, model hyperparameters, preprocessing settings, training splits, and deployment model paths. Ensure you update any paths or parameters as needed before running the pipeline.
 
---
 
 ## Running the Pipeline
 
