@@ -3,7 +3,7 @@ A modular, scalable, and containerized machine learning pipeline for predicting 
 
 ## Project Structure
 ```
-hyperspectral_regression/
+Hyperspectral-Regression-Pipeline-for-DON-Prediction/
 │── src/
 │   ├── data/
 │   │   ├── preprocess.py         # Data preprocessing functions, imputation, scaling, and optional PCA-based feature selection.
@@ -71,21 +71,21 @@ The project settings are defined in the config.yaml file. This file contains con
 
 1. **Data Loading, Training and Evaluation**
 
-To run the entire pipeline (data loading, preprocessing, training, evaluation, and best model selection), execute:
+    To run the entire pipeline (data loading, preprocessing, training, evaluation, and best model selection), execute:
 
-```bash
-python run.py
-```
+    ```bash
+    python run.py
+    ```
 
 2. **API for Predictions**
 
-The API is built using FastAPI and can be run using:
+    The API is built using FastAPI and can be run using:
 
-```bash
-uvicorn src.deployment.api:app --host 0.0.0.0 --port 8000
-```
+    ```bash
+    uvicorn src.deployment.api:app --host 0.0.0.0 --port 8000
+    ```
 
-Then, you can access the API at http://localhost:8000. The API exposes endpoints for status checking (GET /) and predictions (POST /predict).
+    Then, you can access the API at http://localhost:8000. The API exposes endpoints for status checking (GET /) and predictions (POST /predict).
 
 ### Docker-based Execution
 
