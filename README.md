@@ -2,6 +2,7 @@
 A modular, scalable, and containerized machine learning pipeline for predicting DON concentration from hyperspectral data, featuring model selection, hyperparameter tuning, and API deployment
 
 ## Project Structure
+```
 hyperspectral_regression/
 │── src/
 │   ├── data/
@@ -48,15 +49,16 @@ hyperspectral_regression/
 │── Dockerfile.api              # Dockerfile for the API service.
 │── run.py                      # Main entry point to execute the pipeline.
 │── README.md                   # Overview and instructions on running the project.
+```
 
 
 ## Installation
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/gupta-nakul/Hyperspectral-Regression-Pipeline-for-DON-Prediction.git
-   cd Hyperspectral-Regression-Pipeline-for-DON-Prediction
-   ```
+**Clone the Repository:**
+```bash
+git clone https://github.com/gupta-nakul/Hyperspectral-Regression-Pipeline-for-DON-Prediction.git
+cd Hyperspectral-Regression-Pipeline-for-DON-Prediction
+```
 
 
 ## Configuration
@@ -68,6 +70,7 @@ The project settings are defined in the config.yaml file. This file contains con
 ### Local Execution
 
 1. **Data Loading, Training and Evaluation**
+
 To run the entire pipeline (data loading, preprocessing, training, evaluation, and best model selection), execute:
 
 ```bash
@@ -75,6 +78,7 @@ python run.py
 ```
 
 2. **API for Predictions**
+
 The API is built using FastAPI and can be run using:
 
 ```bash
@@ -84,6 +88,7 @@ uvicorn src.deployment.api:app --host 0.0.0.0 --port 8000
 Then, you can access the API at http://localhost:8000. The API exposes endpoints for status checking (GET /) and predictions (POST /predict).
 
 ### Docker-based Execution
+
 The project includes Dockerfiles for containerizing the training and API services.
 
 **Using Docker Compose:**
