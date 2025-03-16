@@ -106,11 +106,11 @@ This command will:
 
 Now to run each container, run:
 1. **For training container:**
-```bash
-docker-compose run train
-```
+    ```bash
+    docker-compose run train
+    ```
 
 2. **For API container:**
-```bash
-docker-compose up api
-```
+    ```bash
+    docker-compose up api
+    ```
