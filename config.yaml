@@ -7,7 +7,7 @@ model:
     dropout_rate: 0.1
     learning_rate: 0.001
     batch_size: 64
-    epochs: 500
+    epochs: 1000
   
   xgboost:
     n_estimators: 1000
@@ -16,12 +16,12 @@ model:
     early_stopping_rounds: 20
   
   cnn:
-    filters: [512, 128, 64]
+    filters: [512, 64]
     kernel_size: 3
     dropout_rate: 0.1
     learning_rate: 0.001
     batch_size: 64
-    epochs: 10
+    epochs: 1000
   
   transformer:
     seq_length: 100
