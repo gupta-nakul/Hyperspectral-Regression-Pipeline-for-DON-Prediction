@@ -1,0 +1,50 @@
+data:
+  dataset_path: "data/hyperspectral_data.csv"
+
+model:
+  fcn:
+    hidden_dims: [128, 512, 64]
+    dropout_rate: 0.1
+    learning_rate: 0.001
+    batch_size: 64
+    epochs: 500
+  
+  xgboost:
+    n_estimators: 1000
+    max_depth: 15
+    learning_rate: 0.1
+    early_stopping_rounds: 20
+  
+  cnn:
+    filters: [512, 128, 64]
+    kernel_size: 3
+    dropout_rate: 0.1
+    learning_rate: 0.001
+    batch_size: 64
+    epochs: 10
+  
+  transformer:
+    seq_length: 100
+    d_model: 128
+    num_heads: 8
+    num_layers: 4
+    dff: 512
+    dropout_rate: 0.2
+    learning_rate: 0.0001
+    batch_size: 32
+    epochs: 50
+
+preprocess:
+  impute_strategy: "mean"
+  scaler: False
+  feature_selection: True
+  pca_components: 50
+
+training:
+  validation_split: 0.2
+
+deployment:
+  xgboost_model_path: "models/xgboost.pkl"
+  transformer_model_path: "models/transformer.pt"
+  cnn_model_path: "models/cnn.pt"
+  fcn_model_path: "models/fcn.pt"
